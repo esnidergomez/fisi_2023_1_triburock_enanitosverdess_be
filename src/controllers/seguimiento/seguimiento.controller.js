@@ -11,7 +11,7 @@ export const getHistorialPagos = async (req, res) => {
         //console.log(rows)
     } catch(error){
         return res.status(500).json({
-            message : 'Error en el servidor'
+            message : 'Error en el servidor as'
         })
     }
 }
