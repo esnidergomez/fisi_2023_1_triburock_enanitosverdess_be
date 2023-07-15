@@ -1,0 +1,293 @@
+{
+	"info": {
+		"_postman_id": "2100a386-a7b0-448d-bdd6-eba80ee2c424",
+		"name": "Condominios Azure",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18135787",
+		"_collection_link": "https://universal-meteor-363937.postman.co/workspace/My-Workspace~c607d730-459b-4a7d-8aac-85c8a8a0b337/collection/18135787-2100a386-a7b0-448d-bdd6-eba80ee2c424?action=share&creator=18135787&source=collection_link"
+	},
+	"item": [
+		{
+			"name": "gestion pagos",
+			"item": [
+				{
+					"name": "listapagos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://condominionode.azurewebsites.net/ux-gestion-pagos/appcodigo/servicio-al-cliente/v1/departamentos/1/listaPagos",
+							"protocol": "https",
+							"host": [
+								"condominionode",
+								"azurewebsites",
+								"net"
+							],
+							"path": [
+								"ux-gestion-pagos",
+								"appcodigo",
+								"servicio-al-cliente",
+								"v1",
+								"departamentos",
+								"1",
+								"listaPagos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "pagar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"titulo\": \"Servicio 1\",\r\n    \"precio\": 500\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://condominionode.azurewebsites.net/ux-gestion-pagos/appcodigo/servicio-al-cliente/v1/pagos/1/pagar",
+							"protocol": "https",
+							"host": [
+								"condominionode",
+								"azurewebsites",
+								"net"
+							],
+							"path": [
+								"ux-gestion-pagos",
+								"appcodigo",
+								"servicio-al-cliente",
+								"v1",
+								"pagos",
+								"1",
+								"pagar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "subir archivo",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "archivo",
+									"type": "file",
+									"src": "/C:/Users/Esnider Gomez/Downloads/2cd89de0_2349smart.pdf"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://condominionode.azurewebsites.net/ux-gestion-pagos/appcodigo/servicio-al-cliente/v1/pagos/1/subircomprobante",
+							"protocol": "https",
+							"host": [
+								"condominionode",
+								"azurewebsites",
+								"net"
+							],
+							"path": [
+								"ux-gestion-pagos",
+								"appcodigo",
+								"servicio-al-cliente",
+								"v1",
+								"pagos",
+								"1",
+								"subircomprobante"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "cuenta",
+			"item": [
+				{
+					"name": "editar datos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{ruta}}{{cuenta}}editar-datos/:id_usuario",
+							"host": [
+								"{{ruta}}{{cuenta}}editar-datos"
+							],
+							"path": [
+								":id_usuario"
+							],
+							"variable": [
+								{
+									"key": "id_usuario",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "listar contactos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{ruta}}{{cuenta}}listar-contactos/:id_usuario",
+							"host": [
+								"{{ruta}}{{cuenta}}listar-contactos"
+							],
+							"path": [
+								":id_usuario"
+							],
+							"variable": [
+								{
+									"key": "id_usuario",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "preguntas-frecuentes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{ruta}}{{cuenta}}preguntas-frecuentes",
+							"host": [
+								"{{ruta}}{{cuenta}}preguntas-frecuentes"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "seguimiento",
+			"item": [
+				{
+					"name": "historialPagos",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://condominionode.azurewebsites.net/ux-seguimiento/condo/servicio-al-cliente/v1/departamentos/1/historialPagos",
+							"protocol": "https",
+							"host": [
+								"condominionode",
+								"azurewebsites",
+								"net"
+							],
+							"path": [
+								"ux-seguimiento",
+								"condo",
+								"servicio-al-cliente",
+								"v1",
+								"departamentos",
+								"1",
+								"historialPagos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "reportePagos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://condominionode.azurewebsites.net/ux-seguimiento/ux-seguimiento/condo/servicio-al-cliente/v1/departamentos/2/reportePagos/2023/7",
+							"protocol": "https",
+							"host": [
+								"condominionode",
+								"azurewebsites",
+								"net"
+							],
+							"path": [
+								"ux-seguimiento",
+								"ux-seguimiento",
+								"condo",
+								"servicio-al-cliente",
+								"v1",
+								"departamentos",
+								"2",
+								"reportePagos",
+								"2023",
+								"7"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "ruta",
+			"value": "http://localhost:3000/",
+			"type": "string"
+		},
+		{
+			"key": "cuenta",
+			"value": "ux-cuenta/appcodigo/servicio-al-cliente/v1/"
+		},
+		{
+			"key": "adminpresupuest",
+			"value": "ux-administracion-presupuesto/appcodigo/servicio-al-cliente/v1/"
+		},
+		{
+			"key": "gestionpago",
+			"value": "ux-gestion-pagos/appcodigo/servicio-al-cliente/v1/"
+		},
+		{
+			"key": "seguimiento",
+			"value": "ux-seguimiento/condo/servicio-al-cliente/v1"
+		}
+	]
+}
