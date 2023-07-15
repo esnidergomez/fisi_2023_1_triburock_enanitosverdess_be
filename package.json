@@ -1,0 +1,25 @@
+{
+  "name": "fisi_2023_1_triburock_enanitosverdes_be",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon ./src/index.js",
+    "start": "node ./src/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "mercadopago": "^1.5.16",
+    "multer": "^1.4.5-lts.1",
+    "mysql2": "^3.5.1",
+    "notenv": "^2.0.3"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}
